@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import {
   TouchableWithoutFeedback,
   Keyboard,
-  FlatList
+  TextInput
 } from 'react-native';
 
 import LogoIcon from '../../assets/logo.svg';
@@ -40,12 +40,32 @@ interface EmployeesProps {
 export function Home() {
   const [employees, setEmployees] = useState<EmployeesProps[]>([]);
   const [loading, setLoading] = useState(true);
+  const [searchText, setSearchText] = useState('');
+  const [filterList, setFilterList] = useState([]);
 
   useEffect(() => {
     async function fetchEmployees() {
       try {
         const response = await api.get(`employees`);
-        setEmployees(response.data);
+        setFilterList(response.data)
+        
+        if (searchText == '') {
+          setEmployees(response.data);
+        } else {
+          setFilterList(
+            employees.filter(item => {
+              if(item.name.toLowerCase().indexOf(searchText.toLowerCase()) > -1) {
+                return true;
+              } else if (item.office.toLowerCase().indexOf(searchText.toLowerCase()) > -1) {
+                return true;
+              } else if (item.phone.toLowerCase().indexOf(searchText.toLowerCase()) > -1) {
+                return true;
+              } else {
+                return false;
+              }
+            })
+          )
+        }
       } catch (error) {
         console.log(error);
       } finally {
@@ -54,7 +74,7 @@ export function Home() {
     }
 
     fetchEmployees();
-  },[])
+  },[searchText])
 
   return (
     <TouchableWithoutFeedback style={{ flex: 1 }} onPress={Keyboard.dismiss}>
@@ -72,7 +92,10 @@ export function Home() {
           contentContainerStyle={{ paddingBottom: 80 }}
         >
           <Title>Funcionários</Title>
-          <SearchInput />
+          <SearchInput 
+            value={searchText}
+            onChangeText={(text) => setSearchText(text)}
+          />
 
           <TableList>
             <TableHeader>
@@ -92,7 +115,7 @@ export function Home() {
                 </LoadingContent>
               ) :
               <>
-                {employees.map((item) => {
+                {filterList.map((item) => {
                   return (
                     <TableItemCard data={item} key={item.id} />
                   )

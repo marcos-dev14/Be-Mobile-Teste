@@ -12,7 +12,7 @@ export function SearchInput({...rest }: TextInputProps) {
     <Container>
       <Input 
         placeholder="Pesquisar"
-        {...rest} 
+        {...rest}
       />
       <SearchButton activeOpacity={0.7} >
         <SearchIcon />
