@@ -75,6 +75,7 @@ export function Home() {
 
     fetchEmployees();
   },[searchText])
+  
 
   return (
     <TouchableWithoutFeedback style={{ flex: 1 }} onPress={Keyboard.dismiss}>
@@ -89,7 +90,9 @@ export function Home() {
         
         <Content 
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={{ paddingBottom: 80 }}
+          contentContainerStyle={{ 
+            paddingBottom: 280 
+          }}
         >
           <Title>Funcionários</Title>
           <SearchInput 
