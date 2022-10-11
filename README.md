@@ -33,9 +33,9 @@ funcionário, filtrar por Nome, Cargo e telefone.
 
 # Tela Home
 
-                    ![Gif](./.github/bemobile-1.gif)
+![Gif](./.github/bemobile-1.gif)
 
 
 # Tela Splash Animada
 
-                    ![Gif](./.github/bemobile-2.gif)
+![Gif](./.github/bemobile-2.gif)
