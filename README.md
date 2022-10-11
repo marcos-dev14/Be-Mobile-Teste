@@ -31,11 +31,11 @@ funcionário, filtrar por Nome, Cargo e telefone.
 - [React Native Iphone X Helper](https://www.npmjs.com/package/react-native-iphone-x-helper)
 - [React Native Responsive Fontsize](https://www.npmjs.com/package/react-native-responsive-fontsize)
 
-# Aplicativo Tela Home
+# Tela Home
 
-![Gif](./.github/bemobile-1.gif)
+                    ![Gif](./.github/bemobile-1.gif)
 
 
-# Aplicativo Tela Splash Animada
+# Tela Splash Animada
 
-![Gif](./.github/bemobile-2.gif)
+                    ![Gif](./.github/bemobile-2.gif)
