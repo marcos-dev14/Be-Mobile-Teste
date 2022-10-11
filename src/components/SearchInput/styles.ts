@@ -11,6 +11,8 @@ export const Container = styled.View`
   align-items: center;
   flex-direction: row;
   margin-top: 28px;
+  border-width: 1px;
+  border-color: ${({theme}) => theme.colors.gray_10};
 `;
 
 export const Input = styled(TextInput)`
