@@ -54,11 +54,16 @@ export function Home() {
         } else {
           setFilterList(
             employees.filter(item => {
+               // Formatação do Número de telefone
+               const formattedNumber = /^([0-9]{2})([0-9]{4,5})([0-9]{4})$/;
+               var phoneNumber = item.phone.replace(/[^0-9]/g, "").slice(0, 11);
+               const newPhoneNumber = phoneNumber.replace(formattedNumber, "+55 ($1) $2-$3");
+
               if(item.name.toLowerCase().indexOf(searchText.toLowerCase()) > -1) {
                 return true;
               } else if (item.office.toLowerCase().indexOf(searchText.toLowerCase()) > -1) {
                 return true;
-              } else if (item.phone.toLowerCase().indexOf(searchText.toLowerCase()) > -1) {
+              } else if (newPhoneNumber.toLowerCase().indexOf(searchText.toLowerCase()) > -1) {
                 return true;
               } else {
                 return false;
