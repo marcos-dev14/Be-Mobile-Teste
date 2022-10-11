@@ -11,10 +11,17 @@ funcionário, filtrar por Nome, Cargo e telefone.
 
 ## Requerimentos
 - Aplicativo foi criado utilizando o Expo com template Bare workflow.
-- [yarn](https://yarnpkg.com/getting-started/install) ou [npm](https://www.npmjs.com)
+
+- Para adicionar o projeto e poder ver como esta aplicação, pega o endereço HTTPS no GitHub, depois no terminal roda o comando
+git clone "https://github.com/marcos-dev14/Be-Mobile-Teste.git". Quando tiver baixado, depois entra na pasta do projeto e roda o comando 
+yarn ou npm install, como for sua preferencia.
+
 - Como foi pedido para usar o [json-server](https://github.com/typicode/json-server) para rodar a api, foi criado o arquivo server.json dentro do src/server/server.json. É onde tem os dados da api com a rota /employees.
+
 - Para rodar o Json-server, eu criei o comando ("api": "json-server ./src/services/server.json --host 192.168.0.106 --port 3333 --delay 700") no arquivo package.json.
+
 - Detalhe, foi adicionado o IP da maquina para conseguir user a api no emulador e no meu Iphone.
+
 - Caso queira testar aplicação, vá no arquivo onde tem o comando "api" e adicionei o IP da sua maquina.
 
 ## Tech Stack
