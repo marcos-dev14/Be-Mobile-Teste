@@ -1,6 +1,5 @@
-import { RFValue } from "react-native-responsive-fontsize";
 import styled from "styled-components/native";
-import { getStatusBarHeight } from 'react-native-iphone-x-helper';
+import { RFValue } from "react-native-responsive-fontsize";
 import { ScrollView } from "react-native";
 
 export const Container = styled.View`

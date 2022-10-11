@@ -1,4 +1,5 @@
 import { TextInputProps } from 'react-native';
+
 import SearchIcon from '../../assets/search.svg';
 
 import { 

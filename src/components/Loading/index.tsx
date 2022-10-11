@@ -1,4 +1,5 @@
 import { ActivityIndicator } from "react-native";
+
 import theme from "../../styles/theme";
 
 export function Loading() {
