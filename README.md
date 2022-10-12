@@ -32,6 +32,7 @@ yarn ou npm install, como for sua preferencia.
 - [Expo](https://expo.dev)
 - [React Navigation](https://reactnavigation.org)
 - [Styled Components](https://styled-components.com/)
+- [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/)
 - [Phosphor Icon](https://phosphoricons.com/)
 - [Axios](https://www.npmjs.com/package/axios)
 - [json-server](https://github.com/typicode/json-server)
